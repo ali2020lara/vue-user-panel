@@ -1,5 +1,7 @@
 <template>
-  <h1>vue</h1>
+  <v-app>
+    <router-view />
+  </v-app>
 </template>
 
 <script setup lang="ts"></script>
