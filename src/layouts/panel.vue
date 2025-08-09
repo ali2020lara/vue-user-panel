@@ -1,12 +1,21 @@
 <template>
   <v-app>
-            <v-app-bar app color="whiteBg" dark>
-          <v-toolbar-title>My App</v-toolbar-title>
-        </v-app-bar>
+    <v-app-bar app color="whiteBg" dark>
+      <v-toolbar-title>{{ routeName.name }}</v-toolbar-title>
+    </v-app-bar>
     <Aside></Aside>
     <v-main>
       <v-container class="py-4">
-        <router-view />
+        <div>
+                  <VContainer>
+            <VRow>
+              <VCol cols="12">
+
+                <router-view />
+              </VCol>
+            </VRow>
+          </VContainer>
+        </div>
       </v-container>
     </v-main>
   </v-app>
@@ -14,19 +23,6 @@
 
 <script setup lang="ts">
 import Aside from '@/components/Aside/aside.vue';
-
-// نیازی به کد خاصی نیست
+import { useRoute } from 'vue-router';
+const routeName = useRoute()
 </script>
-
-
-<!-- <template>
-    <v-main>
-        <v-container>panel
-        </v-container>
-    </v-main>
-</template> -->
-
-<!-- <script setup lang="ts">
-</script>
-
-<style></style> -->
