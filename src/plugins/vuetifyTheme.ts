@@ -8,6 +8,7 @@ export const lightTheme: ThemeDefinition = {
         white: '#F8F8F8',
         blue: '#083A50',
         blueMain: '#F8F8F8',
+        blueBorder: '#ffffff',
     },
 }
 export const darkTheme: ThemeDefinition = {
@@ -18,5 +19,6 @@ export const darkTheme: ThemeDefinition = {
         white: '#F8F8F8',
         blue: '#ffffff',
         blueMain: '#14161D',
+        blueBorder: '#14161D',
     }
 }
