@@ -1024,7 +1024,7 @@
 
                                 </div>
                                 <div class="section-dashboard__body-item-title">
-                                    <h1>{{greetings}} SARA</h1>
+                                    <h1>{{greet}} SARA</h1>
                                 </div>
                             </div>
                             <Clock @greeting="greeting" />
@@ -1055,11 +1055,11 @@
 import { ref } from 'vue';
 import Clock from '../Clock/clock.vue';
 
-let greetings = ref('');
+let greet = ref('');
 
 function greeting(params: string) {
   console.log('greetinggreeting', params);
-  greetings.value = params;
+  greet.value = params;
 }
 </script>
 

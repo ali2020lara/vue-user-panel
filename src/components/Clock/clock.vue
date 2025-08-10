@@ -56,9 +56,7 @@ const emit = defineEmits<{
 }>();
 
 watch(greeting, (newVal) => {
-    console.log('sddddddd',newVal);
-    
-  emit('greeting', newVal); // همینجا greeting رو بفرست
+  emit('greeting', newVal);
 });
 
 let timer: ReturnType<typeof setInterval> | null = null;
