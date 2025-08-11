@@ -39,16 +39,19 @@ const time = reactive<{ h: string; m: string; s: string }>({
     m: '00',
     s: '00',
 });
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 const greeting = computed(() => {
     const hour = Number(time.h);
     if (hour >= 5 && hour < 12) {
-        return 'Good Morning ';
+        return {title: t('goodMorning'), icon: '/images/Moon cloud mid rain.svg'};
     } else if (hour >= 12 && hour < 17) {
-        return 'good afternoon';
+        return {title:t('goodAfternoon'), icon: '/images/Moon cloud mid rain.svg'};
     } else if (hour >= 17 && hour < 21) {
-        return 'good evening';
+        return  {title:t('goodEvening'), icon: ' /images/night.svg'};
     } else {
-        return 'good night';
+        return {title:t('goodNight'), icon: ' /images/night.svg'};
     }
 });
 const emit = defineEmits<{
@@ -84,6 +87,7 @@ onUnmounted(() => {
 
 <style lang="scss">
 .clock-wrap {
+    direction: initial;
     display: flex;
     justify-content: center;
     gap: 10px;
