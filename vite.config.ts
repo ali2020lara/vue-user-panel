@@ -6,6 +6,10 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import vuetify from 'vite-plugin-vuetify'
 // https://vitejs.dev/config/
 export default defineConfig({
+    server: {
+    port: 5174, // پورت جدید
+    host: true
+  },
   plugins: [
     vue(),
     vueDevTools(),
